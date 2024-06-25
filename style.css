@@ -12,6 +12,12 @@
 	color: #ffffff;
 }
 
-p,h1,h2 {
+p,h1,h2,h3,h3 {
 	color: #ffffff;
+}
+
+ol {
+	color: #ffffff;
+	text-align: center;
+	list-style-position: inside;
 }

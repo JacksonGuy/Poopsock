@@ -34,16 +34,52 @@
             <br><br>
             <div class="row">
                 <h2> Chapter 1: Matrices </h2>
+                <h3> <br>Systems of Linear Equations </h3>
                 <p>
                     If we take a linear equation, say \(2x-4=4\), that equation has a particular solution, \(x=4\). In this instance, our equation has a single, solution solution, since our <br>
                     equation is of a single variable. <br><br>
                     In this chapter, we will be looking at systems of linear equations, where we consider the solutions of several linear equations at once. For example, consider the system
                     $$ 
-                        2x + 3y - 3z = 4 \\
-                        -x + 2y + z = 0 \\
-                        4x + 8z = 12
+                        2x + 3y = 2 \\
+                        3x + 2y = 3
                     $$
-                    This system contains 3 linear equations, each having 3 variables.
+                    This system contains 2 linear equations, each having 2 variables. When considering the solutions for a system of equations, we want to know what point, or maybe set of points,
+                    satisfies each equation. In this case, the point \((1,0)\) works as a solution for each equation
+                    $$
+                        2(1) + 3(0) = 2 \\
+                        3(1) + 2(0) = 3
+                    $$
+                    Looking at a higher dimensional example, the system
+                    $$
+                        2x + 3y - 3z = 4 \\
+                        -x + 2y + z = 0
+                    $$
+                    has a set of solutions, rather than a single one. In this case, the line $$ y = \frac{x}{9} + \frac{4}{9} $$ contains all the points which satisfy both equations. This line forms what
+                    we call a solution space, a type of vector space, which is arguably the central topic of linear algebra, but one that we'll talk more about later. <br><br>
+                    In the mean time, over the course of the history of mathematics, a certain notion was adopted to more efficiently 
+                    represent systems of equations, once known as <a href="https://en.wikipedia.org/wiki/Matrix_(mathematics)#History"> arrays</a>, but now referred to as matrices.
+                    A matrix is a collection of numbers, arranged in a series of rows and columns. For example, we can represent the previous system of equations from above as such:
+                    $$
+                        \left[\begin{matrix}
+                            2 & 3 & -3 & 4 \\
+                            -1 & 2 & 1 & 0
+                        \end{matrix}\right]
+                    $$
+                    This makes doing operations on systems of equations much easier, and lets us think about matrices more abstractly. As evidence of this, the majority of the time when you see
+                    matrices being used in other fields, they aren't typically used to represent systems of equation, and rather just for their mathematical properties. Since this is linear
+                    algebra, however, just keep in mind the context of systems of equations going forward.   
+                </p>
+                
+                <h3> <br>Matrix Operations </h3>
+                <p>
+                    The first type of matrix operations we'll look at are call Elementary Row Operations, or EROs, which are: </p>
+                    <ol>
+                        <li>Multiplying a row by a nonzero number</li>
+                        <li>Swapping the position of two rows</li>
+                        <li>Adding the multiple of one row to another</li>
+                    </ol> <p>
+                    These three operations are of notable importance because they all have something in common, that performing any of these operations does not affect the solution space
+                    of the corresponding system of equations.
                 </p>
             </div>
         </div>
