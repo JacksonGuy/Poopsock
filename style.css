@@ -1,0 +1,17 @@
+.main-body {
+	background-color: #2e2e2e;
+}
+
+.header-text {
+	font-size: 32px;
+	color: #ffffff;
+}
+
+.subheader-text {
+	font-size: 28px;
+	color: #ffffff;
+}
+
+p,h1,h2 {
+	color: #ffffff;
+}
