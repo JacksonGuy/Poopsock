@@ -33,6 +33,19 @@
             </div>
             <br><br>
             <div class="row">
+                <h2> Introduction </h2>
+                <p>
+                    This page is meant as a short introduction and overview of basic linear algebra. Rather than attempting and likely failing at being formal and using strict
+                    definitions and theorems, I'll going to be more casual and somewhat intuitive with my explainations. Linear algebra is more interesting when used as a lens from
+                    which you can view mathematics, rather than a subject in of itself anyways. Taking linear algebra changed my perspective on mathematics, and my goal is to
+                    produce the same sort of effect in this article. <br><br>
+                    That being said, this article will still assume that you have a basic understanding of high school algebra and set theory. I'll also emphasize again just how basic
+                    this article will be in terms of depth. To clarify, I am not a mathematics professor, and I am writing this article using my old notes from a course I took over a
+                    year ago at the time of writing as references. That being said, have fun.    
+                </p>
+            </div>
+            <br><br>
+            <div class="row">
                 <h2> Chapter 1: Matrices </h2>
                 <h3> <br>Systems of Linear Equations </h3>
                 <p>
@@ -79,7 +92,18 @@
                         <li>Adding the multiple of one row to another</li>
                     </ol> <p>
                     These three operations are of notable importance because they all have something in common, that performing any of these operations does not affect the solution space
-                    of the corresponding system of equations.
+                    of the corresponding system of equations. Intuitively, this make some sense. If you take two lines, say \(y=x\) and \(y=-x\), then they will intersect at the same point as 
+                    lines \(y=2x\) and \(y=-2x\), or for any multiple. Similarly, adding a multiple of one row to another row is, in some sense, the same as multiplying that row by a nonzero number.
+                    <br><br>
+                    Being able to modify a matrix while, in some sense, preserving the information encoded by the matrix has very important use cases in linear algebra. Notably, EROs can be
+                    used to obtain the Reduced Row Echelon Form (RREF) of the matrix. A matrix which is in RREF has the following properties: </p>
+                    <ol>
+                        <li>The leading entry (called the pivot) of each row is to the right of the pivot of the above row</li>
+                        <li>The pivot of each row is equal to 1</li>
+                        <li>The pivot is the only number in their column</li>
+                        <li>If a row consists of all zeros, that row is located at the bottom of the matrix</li>
+                    </ol> <p>
+                    
                 </p>
             </div>
         </div>
