@@ -9,7 +9,20 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
        	<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
-	<link rel="stylesheet" href="../style.css?v=1">
+	    <link rel="stylesheet" href="../style.css?v=1">
+        <style>
+            .graph-img {
+                width: 40%;
+                height: auto;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .graph-img-cap {
+                text-align: center;
+            }
+        </style>
     </head>
     <body class="main-body">
         <!--#include virtual="../header.html"-->
@@ -17,6 +30,52 @@
             <div class="row">
                 <h1> Graceful Labeling </h1>
             </div>
+            <br><br>
+            <div class="row">
+                <h2> Introduction </h2>
+                <p>
+                    Graceful labelings are the topic of some very imfamous theorems and
+                    unsolved problems in the field of graph theory. Like many other problems
+                    in graph theory, graceful labelings are deceptively simple, hiding
+                    much anguish and suffer behinds its relatively simple definition.
+                    The problem at the center of this topic, the Ringel-Kotzig conjecture,
+                    or more typically the Graceful Tree Conjecture (GTC) was famously
+                    described as being a "disease" for the field, which makes it a
+                    fantastic topic to research. 
+                </p>
+            </div>
+            <br><br>
+            <div class="row">
+                <h2> Definitions </h2>
+                <p>What is a graceful labeling?</p>
+                <h3> Formally </h3>
+                <p>
+                    Given a graph \(G\) on \(n\) vertices, a vertex labeling is a
+                    injective function \( \phi:V(G) \rightarrow \{0, \dots, n-1\}\).
+                    A <i>graceful labeling</i> (also called a \(\beta\)-valuation) is 
+                    a injective function \( \psi:E(G) \rightarrow \{1, \dots, n\} \) such 
+                    that for any edge \(e=uv \in E(G)\), we have that
+                    \( \psi(e) = | \phi(u) - \phi(v) |\).
+                </p>
+                <h3> Informally </h3>
+                <p>
+                    Consider a graph \(G\) on \(n\) vertices, and we give each vertex a distinct
+                    label, going from 0 to \(n-1\). For example, if we have 4 vertices, then our labels
+                    for the vertices of \(G\) are \(\{0,1,2,3\}\). Now, suppose that we take the labels
+                    for two adjacent vertices, that is two vertices which lie on the same edge,
+                    and we take the absolute different of their labels. The idea behind a graceful
+                    labeling is that, if we are <i>really</i> careful about how we assign our
+                    vertex labels, then the absolute differences between the vertices on
+                    each edge will form the sequence \(\{1,2,\dots,n\}\), meaning that no
+                    two edges will have the same difference. 
+                </p>
+                <img class="graph-img"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Graceful_labeling.svg/1920px-Graceful_labeling.svg.png">
+                <p class="graph-img-cap"> 
+                    An example of a graceful labeling for a graph with 6 vertices. (Wikipedia)
+                </p>
+            </div>
+
         </div>
     </body>
 </html>
