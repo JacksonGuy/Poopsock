@@ -111,8 +111,66 @@
             <br><br>
             <div class="row">
                 <h2> Graph Decomposition </h2>
+                <h3> Definition </h3>
                 <p>
-                    
+                    Given a graph \(G = (V,E)\), a <i> decomposition </i> of \(G\) is a set of edgewise-disjoint subgraphs
+                    \( D = \{ H_1, \dots, H_k \} \) such that \( \bigcup_{i=1}^{k} H_i = G \). By edgewise-disjoint, we mean
+                    that for any two subgraphs \( H_i,H_j \in D\), \( E(H_i) \cap E(H_j) = \emptyset \).
+                    <br><br>
+                    Going along with the trend here, the more digestible way to think about decompositions is that we are
+                    breaking a graph down into a collection a "components", such that no two components share an edge, and
+                    if we take all of the components and piece them together, they can combine to build back the original graph.
+                </p>
+                <br><br>
+                <h3> Purpose </h3>
+                <p>
+                    As with many things in life, often times breaking down a big problem into a collection of smaller, more
+                    tameable problems is a good approach to overcoming difficult challenges. Decompositions are just that.
+                    Say you want to prove some statement about a graph with a particular structure. Proving that statement
+                    might be difficult when looking at the graph as a whole, but if you can show that the graph you're working
+                    with can be decomposed down into specific components, each of which you can prove that statement for
+                    individually, then that statement must hold for the full graph as a whole.
+                    <br><br>
+                    So, back to the original point, Ringel's Conjecture is a statement dealing with the decompositions of
+                    complete graphs, graphs where each vertex is connected to every other vertex. We'll get this out of the
+                    way now to avoid confusion, but Ringel's Conjecture has been <a href="https://arxiv.org/abs/2001.02665">solved</a>
+                    as of 2020, however we'll continue to call it "Ringel's Conjecture" here for convenience.
+                    <br>
+                    Anyways, here's the statement:
+                </p>
+                <h4> 
+                    <b>Conjecture.</b> 
+                    <i> Given a tree \(T\) on \(n\) edges, \(K_{2n+1}\) decomposes into \(2n+1\) copies of \(T\) </i> 
+                </h4>
+                <img class="graph-img" src="images/graceful/Decomposition.png">
+                <p class="graph-img-cap">A decomposition of \(K_5\) into 5 3-paths</p>
+            </div>
+            <br><br>
+            <div class="row">
+                <h2> The Connection </h2>
+                <p>
+                    Now it's time for the big reveal where we show how graceful labelings and decompositions are related.
+                </p>
+                <br>
+                <h4>
+                    <b> Theorem. </b>
+                    <i> If a tree \(T\) with \(n\) edges has a graceful labeling, then \(K_{2n+1}\) decomposes into \(2n+1\) copies of T. </i>
+                </h4>
+                <br>
+                <p>
+                    Take a minute to admire that statement. Seriously, do it.
+                    <br><br><br><br><br>
+                    Isn't that awesome? In case you didn't catch it, this theorem means that the Graceful Tree Conjecture implies Ringel's Conjecture,
+                    so if you were to prove GTC, then you would also be proving Ringel's Conjecture at the same time. That connection isn't
+                    super easy to spot either. Afterall, we took two seemingly unrelated concepts about graphs and just showed that 
+                    they're actually deeply connected. It's very rare in math that you get a connected as clean and profound as that one. 
+                    It's similar to how the Fundamental Theorem of Calculus relates the ideas of the derivative and the integral, ideas that,
+                    had you not studied calculus, would seem completely different from each other.
+                    <br><br>
+
+                    Anyways, I hope you appriciated this journey through graph theory. Hopefully there will be more posts like this one to come. Stay tuned.
+                    <br>
+                    - Jackson
                 </p>
             </div>
         </div>
